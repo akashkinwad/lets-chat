@@ -1,0 +1,43 @@
+%h2
+  = @room.name
+.row
+  .col-12.col-md-3
+    = render partial: 'rooms'
+  .col
+    .chat{"data-channel-subscribe" => "room", "data-room-id" => "#{@room.id}"}
+      .chat-history
+        %ul.chat-ul
+          - @room.room_messages.each do |room_message|
+            .chat-message-container
+              - if room_message.user_id == current_user.id
+                %li
+                  .message-data
+                    %span.message-data-name
+                      %i.fa.fa-circle.you
+                      You
+                  .message.you-message
+                    = room_message.message
+              - else
+                %li.clearfix
+                  .message-data.align-right
+                    %span.message-data-name
+                      = room_message.username
+                    %i.fa.fa-circle.me
+                  .message.me-message.float-right
+                    = room_message.message
+
+    = simple_form_for @room_message, remote: true do |form|
+      .input-group.mb-3
+        = form.input :message, as: :string, wrapper: false, label: false,  input_html: { class: 'chat-input emoji-picker-container', autocomplete: 'off' }, data: { emojiable: true }           
+        .input-group-append
+          = form.submit "Send", class: 'btn btn-primary chat-input'
+      = form.input :room_id, as: :hidden
+
+.d-none{"data-role" => "message-template"}
+  %li
+    .message-data
+      %span.message-data-name{"data-role" => "message-user-id"}
+        %i.fa.fa-circle.you
+        You
+    .message.you-message{"data-role" => "message-text"}
+
