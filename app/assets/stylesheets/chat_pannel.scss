@@ -39,6 +39,11 @@
   color:#003366;
 }
 
+.you-message {
+  background: #CCDBDC;
+  color:#003366;
+}
+
 .message-data {
   margin-bottom: 15px;
 }
@@ -79,6 +84,11 @@
 .chat .chat-history .me-message {
   background: #E9724C;
 }
+
+.me-message {
+  background: #E9724C;
+}
+
 .chat .chat-history .me-message:after {
   border-color: #E9724C transparent;
     right: 20px;
@@ -86,6 +96,15 @@
     left: auto;
     bottom:auto;
 }
+
+.me-message:after {
+  border-color: #E9724C transparent;
+    right: 20px;
+    top: -15px;
+    left: auto;
+    bottom:auto;
+}
+
 .chat .chat-message {
   padding: 30px;
 }
@@ -97,6 +116,10 @@
 
 .chat-ul li{
     list-style-type: none;
+}
+
+li{
+  list-style-type: none;
 }
 
 .align-left {
@@ -128,6 +151,6 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Raleway",sans-serif;
-    color: #003366;
+  font-family: "Raleway",sans-serif;
+  color: #003366;
 }

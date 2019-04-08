@@ -18,14 +18,12 @@ $(function() {
           var user_id = data.user_id;
           var content = '';
           if (user_id == current_user_id) {
-            alert('current_user');
-            content = messageTemplate.children().clone(true, true);
+            content = messageTemplate.children().not('.other_user_message').clone(true, true);
             content.find('[data-role="user-avatar"]').attr('src', data.user_avatar_url);
             content.find('[data-role="message-text"]').text(data.message);
             content.find('[data-role="message-date"]').text(data.updated_at);
           } else {
-            alert('other-user');
-            content = messageTemplate.children().not('#current_user_message').clone(true, true);
+            content = messageTemplate.children().not('.current_user_message').clone(true, true);
             content.find('[data-role="user-avatar"]').attr('src', data.user_avatar_url);
             content.find('[data-role="message-text"]').text(data.message);
             content.find('[data-role="username"]').text(data.username);
