@@ -3,11 +3,11 @@
   box-sizing: border-box;
 }
 .chat .chat-history {
-  padding: 30px 30px 20px;
-  border-bottom: 2px solid white;
+  padding: 10px 20px 10px;
+  border-bottom: 1px solid white;
 }
 .chat .chat-history .message-data {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 .chat .chat-history .message-data-time {
   color: #a8aab1;
@@ -15,12 +15,12 @@
 }
 .chat .chat-history .message {
   color: white;
-  padding: 18px 20px;
-  line-height: 26px;
-  font-size: 16px;
+  padding: 15px 15px;
+  line-height: 15px;
+  font-size: 15px;
   border-radius: 5px;
-  margin-bottom: 30px;
-  width: 90%;
+  margin-bottom: 15px;
+  width: 93%;
   position: relative;
 }
 .chat .chat-history .message:after {
@@ -35,48 +35,6 @@
   width: 0;
 }
 .chat .chat-history .you-message {
-  background: #CCDBDC;
-  color:#003366;
-}
-
-.you-message {
-  background: #CCDBDC;
-  color:#003366;
-}
-
-.message-data {
-  margin-bottom: 15px;
-}
-
-.you-message {
-  background: #CCDBDC;
-  color:#003366;
-}
-
-.message {
-  color: white;
-  padding: 18px 20px;
-  line-height: 26px;
-  font-size: 16px;
-  border-radius: 5px;
-  margin-bottom: 30px;
-  width: 90%;
-  position: relative;
-}
-
-.message:after {
-  content: "";
-  position: absolute;
-  top: -15px;
-  left: 20px;
-  border-width: 0 15px 15px;
-  border-style: solid;
-  border-color: #CCDBDC transparent;
-  display: block;
-  width: 0;
-}
-
-.you-message {
   background: #CCDBDC;
   color:#003366;
 }
@@ -97,14 +55,6 @@
     bottom:auto;
 }
 
-.me-message:after {
-  border-color: #E9724C transparent;
-    right: 20px;
-    top: -15px;
-    left: auto;
-    bottom:auto;
-}
-
 .chat .chat-message {
   padding: 30px;
 }
@@ -115,10 +65,6 @@
 }
 
 .chat-ul li{
-    list-style-type: none;
-}
-
-li{
   list-style-type: none;
 }
 

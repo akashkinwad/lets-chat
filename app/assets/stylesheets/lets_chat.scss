@@ -17,12 +17,12 @@
 .chat {
   border: 1px solid lighten($secondary, 40%);
   background: lighten($secondary, 50%);
-  height: 50vh;
+  height: 70vh;
   border-radius: 5px 5px 0 0;
   overflow-y: auto;
 
   .chat-message-container {
-    padding: 5px;
+    padding: 2px;
 
     .avatar {
       margin: 5px;
@@ -37,7 +37,7 @@
     }
 
     & + .chat-message-container {
-      margin-top: 10px;
+      margin-top: 2px;
     }
   }
 }
