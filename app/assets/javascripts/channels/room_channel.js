@@ -3,7 +3,7 @@ $(function() {
     var $element = $(element),
         room_id = $element.data('room-id')
         messageTemplate = $('[data-role="message-template"]');
-        messages_div = $('.chat-message-container');
+        messages_div = $('.chat-ul');
 
     var current_user_id = $('.current_user_message').data('current-user-id');
 

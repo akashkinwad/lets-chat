@@ -34,14 +34,16 @@
       = form.input :room_id, as: :hidden
 
 .d-none.append_new_message{"data-role" => "message-template"}
-  %li.current_user_message
-    .message-data
-      %span.message-data-name
-        %i.fa.fa-circle.you
-        You
-    .message.you-message{"data-role" => "message-text"}
-  %li.clearfix.other_user_message
-    .message-data.align-right
-      %span.message-data-name{"data-role" => "username"}
-        %i.fa.fa-circle.me
-    .message.me-message.float-right{"data-role" => "message-text"}
+  .chat-message-container.current_user_message
+    %li
+      .message-data
+        %span.message-data-name
+          %i.fa.fa-circle.you
+          You
+      .message.you-message{"data-role" => "message-text"}
+  .chat-message-container.other_user_message
+    %li.clearfix
+      .message-data.align-right
+        %span.message-data-name{"data-role" => "username"}
+          %i.fa.fa-circle.me
+      .message.me-message.float-right{"data-role" => "message-text"}
